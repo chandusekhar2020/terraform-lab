@@ -9,18 +9,6 @@ resource "aws_instance" "ec2-lab" {
     Name = "ec2-lab"
     owner = "Chandu"
     }
-    provisioner "file" {
-      source = "install.sh"
-      destination = "/tmp/install.sh"
-      connection {
-        type = "ssh"
-        user = "ec2-user"
-        password = ""
-        host = self.public_ip
-        #host = aws_eip.lb.public_ip
-        private_key = file("private-key/terraformkeypair.pem")
-      }
-    }
 }
 resource "aws_eip" "lb" {
 }
