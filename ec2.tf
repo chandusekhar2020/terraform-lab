@@ -2,7 +2,7 @@ resource "aws_instance" "ec2-lab" {
   ami = data.aws_ami.amazonlinux.id
   instance_type = var.instance_type
   key_name   = var.key_name
-  availability_zone = "ap-south-1a"
+  availability_zone = "ap-south-1c"
   tags = {
     env = "dev"
     purpose = "dev"
