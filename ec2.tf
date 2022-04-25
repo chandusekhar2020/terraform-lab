@@ -7,7 +7,7 @@ resource "aws_instance" "ec2-lab" {
     env = "dev"
     purpose = "dev"
     Name = "ec2-dev-lab"
-    owner = "B Chandu S"
+    owner = "B Chandu Sekhar"
     }
 }
 resource "aws_eip" "lb" {
