@@ -30,8 +30,8 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-	  chmod +x script1.sh,
-	  ./script1.sh
+        run: 
+          sh ./script1.sh
+
+
 		  
