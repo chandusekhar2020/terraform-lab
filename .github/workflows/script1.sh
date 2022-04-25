@@ -1,14 +1,23 @@
-#!/bin/bash
-filename=myfile1.txt
-LINES=$(cat $filename)
+name: Close Pull Request
 
-for LINE in $LINES
-do
-grep -in $LINE myfile2.txt (n : line number , i : capital and small case : not required if its numerical values)
-if [ $? = 0 ]
-then
-echo "$LINE" >> final_match.txt
-else
-echo "value not found"
-fi
-done
+# only trigger on pull request closed events
+on:
+  pull_request:
+    types: [ closed ]
+
+jobs:
+  merge_job:
+    # this job will only run if the PR has been merged
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo PR #${{ github.event.number }} has been merged
+
+  close_job:
+    # this job will only run if the PR has been closed without being merged
+    if: github.event.pull_request.merged == false
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo PR #${{ github.event.number }} has been closed without being merged
