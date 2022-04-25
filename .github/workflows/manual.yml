@@ -7,7 +7,7 @@ on:
   # Triggers the workflow on pull request events but only for the main branch
   pull_request:
     branches: [ main ]
-	types: [opened, reopened, closed]
+    types: [opened, reopened, closed]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,6 +32,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo Add other actions to build,
-		  chmod +x ./script1.sh
-		  sh ./script1.sh
+	  chmod +x script1.sh,
+	  ./script1.sh
 		  
