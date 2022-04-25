@@ -2,10 +2,10 @@ resource "aws_instance" "ec2-lab" {
   ami = data.aws_ami.amazonlinux.id
   instance_type = var.instance_type
   key_name   = var.key_name
-  availability_zone = "ap-south-1b"
+  availability_zone = "ap-south-1a"
   tags = {
     env = "dev"
-    purpose = "testing"
+    purpose = "dev"
     Name = "ec2-lab"
     owner = "Chandu"
     }
