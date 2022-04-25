@@ -11,6 +11,6 @@ variable "instance_type" {
 variable "key_name" {
     default = "terraformkeypair"
     type = string
-    description = "The AWS instance key name"
+    description = "The AWS instance key name for the VMs"
 }
 
