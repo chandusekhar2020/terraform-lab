@@ -5,7 +5,7 @@ resource "aws_instance" "ec2-lab" {
   availability_zone = "ap-south-1a"
   tags = {
     env = "dev"
-    purpose = "testing"
+    purpose = "dev"
     Name = "ec2-lab"
     owner = "Chandu"
     }
