@@ -1,14 +1,15 @@
 #!/bin/bash
-filename=myfile1.txt
-LINES=$(cat $filename)
-
-for LINE in $LINES
-do
-grep -in $LINE myfile2.txt (n : line number , i : capital and small case : not required if its numerical values)
-if [ $? = 0 ]
-then
-echo "$LINE" >> final_match.txt
-else
-echo "value not found"
+# Script to do numeric comparisons
+var1=10
+var2=20
+if [ $var2 -gt $var1 ]
+    then
+        echo "$var2 is greater than $var1"
 fi
-done
+# Second comparison
+If [ $var1 -gt 30]
+    then
+        echo "$var is greater than 30"
+    else
+        echo "$var1 is less than 30"
+fi
