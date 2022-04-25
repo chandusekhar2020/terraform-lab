@@ -42,7 +42,9 @@ jobs:
 
       # Get the list of Merged and closed PRs
       - name: Run a gh pr command 
-        run : gh pr list --state "closed"
+        run: |
+          gh auth login
+          gh pr list --state "closed"
         
       # Runs a single command using the runners shell
       - name: Run a one-line script
