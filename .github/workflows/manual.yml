@@ -49,10 +49,8 @@ jobs:
         run: |
           # make file runnable, might not be necessary
           chmod +x "${GITHUB_WORKSPACE}/.github/workflows/script1.sh"
-
           # run script
-          "${GITHUB_WORKSPACE}/.github/workflows/script1.sh"
-		  
+          "${GITHUB_WORKSPACE}/.github/workflows/script1.sh"		  
       - name: listPullRequests
         uses: buildsville/list-pull-requests@v1
         id: list
