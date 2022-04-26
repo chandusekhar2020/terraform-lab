@@ -1,7 +1,7 @@
 variable "region" {
     default = "ap-south-1"
     type = string
-    description = "The AWS region for the test VM is ap-south-1c"
+    description = "The AWS region for the test VM is ap-south-1d"
 }
 variable "instance_type" {
     default = "t2.micro"
