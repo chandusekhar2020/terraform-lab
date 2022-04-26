@@ -57,6 +57,6 @@ jobs:
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           labels: '[]'
-          skip_hour: '2'
+          skip_hour: '24'
       - name: output
         run: echo '${{ steps.list.outputs.pulls }}'
