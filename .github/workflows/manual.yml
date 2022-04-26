@@ -59,4 +59,4 @@ jobs:
           labels: '[]'
           skip_hour: '24'
       - name: output
-        run: echo '${{ steps.list.outputs.pulls }}'
+        run: echo "${{ steps.list.outputs.pulls }}"
