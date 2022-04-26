@@ -6,7 +6,7 @@ variable "region" {
 variable "instance_type" {
     default = "t2.micro"
     type = string
-    description = "The AWS Instane type for the VM"
+    description = "The AWS Instane type for the VM in ap-south-1a"
 }
 variable "key_name" {
     default = "terraformkeypair"
