@@ -39,12 +39,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-
-      # Get the list of Merged and closed PRs
-      - name: Run a gh pr command 
-        run: |
-          gh auth login
-          gh pr list --state "closed"
+          
+      - name: output
+        run: echo '${{ steps.list.outputs.pulls }}'
         
       # Runs a single command using the runners shell
       - name: Run a one-line script
