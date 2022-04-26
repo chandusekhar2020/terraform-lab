@@ -57,6 +57,14 @@ jobs:
         with:
           token: ${{secrets.GITHUB_TOKEN}}
           labels: '[]'
-          skip_hour: '24'
+          skip_hour: '24'        
+      - name: Create pulls using REST API
+        id: pullhttprequest
+        run: |
+          curl --request GET \
+          --url https://api.github.com/repos/${{ github.repository }}/pulls?state=all \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --fail
       - name: output
-        run: echo '${{ steps.list.outputs.pulls }}'
+        run: echo '${{ steps.pullhttprequest.outputs.response }}'
