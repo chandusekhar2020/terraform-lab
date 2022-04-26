@@ -52,6 +52,11 @@ jobs:
 
           # run script
           "${GITHUB_WORKSPACE}/.github/workflows/script1.sh"
-
+		  
+      - name: listPullRequests
+        uses: buildsville/list-pull-requests@v1
+        id: list
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
       - name: output
         run: echo '${{ steps.list.outputs.pulls }}'
